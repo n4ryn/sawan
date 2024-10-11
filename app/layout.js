@@ -23,7 +23,32 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <div className="w-screen h-screen flex flex-col items-center justify-between">
+          <div className="w-full bg-slate-100 flex justify-between p-4">
+            <h1 className="font-bold">
+              <a href="/">Sawan</a>
+            </h1>
+
+            <ul className="flex justify-center gap-4">
+              <li>
+                <a href="/about-us">About Us</a>
+              </li>
+              <li>
+                <a href="/t&c">Terms & Conditions</a>
+              </li>
+              <li>
+                <a href="/contact-us">Contact</a>
+              </li>
+            </ul>
+          </div>
+
+          {children}
+          <div className="w-full bg-slate-100 text-center p-4">
+            <p>Privacy Policy | Terms of Service | FAQ</p>
+            <p>Contact: email@example.com | Phone: 123-456-7890</p>
+            <p>Follow us: [Social Icons]</p>
+          </div>
+        </div>
       </body>
     </html>
   );
